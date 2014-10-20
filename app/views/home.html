@@ -5,7 +5,7 @@
 
     <div class="post" ng-repeat="post in posts">
         <h3>{{ post.title }}</h3>
-        {{ post.content }}
+        <div ng-bind-html="renderHtml(post.content)"></div>
     </div>
 
 </div>

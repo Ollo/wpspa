@@ -44,6 +44,15 @@ function(angular, routes, ngResource) {
     });
 
   })
+
+  // let api html content render
+  .config(function($sceDelegateProvider){
+    $sceDelegateProvider.resourceUrlWhitelist([
+        'self',
+        '/wp-json/*'
+    ]);
+  })
+
   .config(routes)
   .constant('VIEWS', 'wp-content/themes/wpspa/app/views/')
   .constant('API', '/wp-json/');
@@ -58,7 +67,7 @@ function(angular, routes, ngResource) {
 
   // home
 
-  app.controller('homeController', ['$scope', '$resource', 'API', function ($scope, $resource, API) {
+  app.controller('homeController', ['$scope', '$sce', '$resource', 'API', function ($scope, $sce, $resource, API) {
 
     var posts = $resource(API + 'posts');
 
@@ -75,6 +84,10 @@ function(angular, routes, ngResource) {
 
         });
     };
+
+    $scope.renderHtml = function(html_code) {
+       return $sce.trustAsHtml(html_code);
+    }
 
     $scope.getPosts();
 

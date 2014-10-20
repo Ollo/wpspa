@@ -6,20 +6,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>WPSPA</title>
-    <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
 
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css">
+    <title>WPSPA</title>
 
-  <?php wp_head(); ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css">
+    <?php wp_head(); ?>
   </head>
     <body>
       <div class="wrapper">
-        <hgroup id="globalHeader" class="site_header">
+        <header id="globalHeader" class="site_header">
           <h1 id="logo"> WPSPA <i class="fa fa-terminal"></i></h1>
           <h3 id="tagline">Angular and the WP API</h3>
-        </hgroup>
+        </header>
 
         <main class="content">
           <nav class="primary">
@@ -32,16 +31,11 @@
           <section class="content_body" ui-view>
           </section>
         </main>
-
-        <footer id="globalFooter">
-        </footer>
       </div>
-
       <script
         type="text/javascript"
         src="<?php echo get_template_directory_uri(); ?>/bower_components/requirejs/require.js"
         data-main="<?php echo get_template_directory_uri(); ?>/app/main.js">
       </script>
-
   </body>
 </html>
