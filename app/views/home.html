@@ -1,0 +1,11 @@
+<div ng-controller="homeController">
+    <header>
+        <h1> Home </h1>
+    </header>
+
+    <div class="post" ng-repeat="post in posts">
+        <h3>{{ post.title }}</h3>
+        {{ post.content }}
+    </div>
+
+</div>

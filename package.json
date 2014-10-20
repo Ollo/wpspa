@@ -1,0 +1,13 @@
+{
+  "name": "shell",
+  "description": "a node / grunt powered boiler for front end",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.1",
+    "grunt-contrib-sass": "~0.7.2"
+  },
+  "dependencies": {
+    "grunt-contrib-connect": "^0.8.0"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "wpspa",
+  "version": "0.0.1",
+  "homepage": "ollomedia.com",
+  "authors": [
+    "Ollo <joshua@ollomedia.com>"
+  ],
+  "description": "A experimental angular spa build on top of the wp json api",
+  "main": "assets/css/main.css",
+  "keywords": [
+    "SASS",
+    "HTML5",
+    "Bourbon",
+    "Neat"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bourbon": "~4.0.2",
+    "neat": "~1.6.0",
+    "components-font-awesome": "~4.2.0",
+    "normalize-css": "~3.0.2",
+    "angular": "v1.3.0-beta.5",
+    "angular-ui-router": "0.2.10",
+    "angular-resource": "v1.3.0-beta.5",
+    "requirejs": "2.1.11"
+  }
+}
